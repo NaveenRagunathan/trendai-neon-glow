@@ -106,7 +106,7 @@ const HeroSection = () => {
             <div className="flex items-center justify-center gap-3 mb-4">
               <Brain className="w-8 h-8 text-cyan-400 animate-neon-pulse" />
               <h1 className="text-2xl md:text-3xl font-montserrat font-bold text-white">
-                TrendAI News
+                Trendy.ai
               </h1>
             </div>
             <div className="w-24 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-blue-500 mx-auto rounded-full"></div>
