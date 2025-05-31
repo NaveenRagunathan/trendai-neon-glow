@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,16 +53,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// TrendAI News Custom Colors
+				coral: '#FF6F61',
+				mustard: '#FFD166',
+				neon: '#00FFAB',
+				dark: '#1B1B1B',
+				light: '#F5F5F5',
+				neutral: '#7E7E7E',
+			},
+			fontFamily: {
+				'montserrat': ['Montserrat', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -69,26 +71,46 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
+				'neon-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px #00FFAB, 0 0 10px #00FFAB, 0 0 15px #00FFAB'
 					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
+					'50%': {
+						boxShadow: '0 0 10px #00FFAB, 0 0 20px #00FFAB, 0 0 30px #00FFAB'
 					}
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
 					},
-					to: {
-						height: '0'
+					'50%': {
+						transform: 'translateY(-20px)'
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'gradient-shift': {
+					'0%, 100%': {
+						backgroundPosition: '0% 50%'
+					},
+					'50%': {
+						backgroundPosition: '100% 50%'
 					}
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'gradient-shift': 'gradient-shift 3s ease infinite'
 			}
 		}
 	},
