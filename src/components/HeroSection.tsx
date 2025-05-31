@@ -76,41 +76,26 @@ const HeroSection = () => {
   }
 
   return (
-    <div className="min-h-screen bg-dark relative overflow-hidden">
-      {/* Geometric Background Pattern */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
+        {/* Floating orbs */}
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 opacity-10">
           <div 
             className="w-full h-full"
             style={{
               backgroundImage: `
-                linear-gradient(rgba(0, 255, 171, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 255, 171, 0.1) 1px, transparent 1px)
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)
               `,
-              backgroundSize: '50px 50px'
+              backgroundSize: '60px 60px'
             }}
           ></div>
-        </div>
-        
-        {/* Floating Geometric Shapes */}
-        <div className="absolute top-20 left-10">
-          <div className="w-20 h-20 border-2 border-coral/40 rotate-45 animate-float"></div>
-        </div>
-        <div className="absolute top-40 right-20">
-          <div className="w-16 h-16 bg-gradient-to-br from-mustard/30 to-transparent rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        </div>
-        <div className="absolute bottom-40 left-1/4">
-          <div className="w-12 h-12 border-2 border-neon/50 animate-float" style={{ animationDelay: '2s' }}></div>
-        </div>
-        <div className="absolute bottom-20 right-1/3">
-          <div className="w-24 h-24 border-2 border-mustard/30 rounded-full animate-float" style={{ animationDelay: '3s' }}></div>
-        </div>
-        
-        {/* Diagonal Lines */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-coral/30 to-transparent transform rotate-12"></div>
-          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon/30 to-transparent transform -rotate-12"></div>
         </div>
       </div>
 
@@ -119,22 +104,22 @@ const HeroSection = () => {
           {/* Brand Header */}
           <div className="mb-8 animate-fade-in-up">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Brain className="w-8 h-8 text-neon animate-neon-pulse" />
-              <h1 className="text-2xl md:text-3xl font-montserrat font-bold text-light">
+              <Brain className="w-8 h-8 text-cyan-400 animate-neon-pulse" />
+              <h1 className="text-2xl md:text-3xl font-montserrat font-bold text-white">
                 TrendAI News
               </h1>
             </div>
-            <div className="w-24 h-1 bg-gradient-to-r from-coral via-mustard to-neon mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
           {/* Main Headline */}
           <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-light mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-montserrat font-bold text-white mb-6 leading-tight">
               AI-Powered News
               <br />
-              <span className="gradient-text">Intelligence</span>
+              <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">Intelligence</span>
             </h2>
-            <p className="text-xl md:text-2xl text-mustard font-poppins font-light max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-300 font-poppins font-light max-w-3xl mx-auto leading-relaxed">
               Get the latest AI and tech breakthroughs curated by artificial intelligence. 
               No noise, just the insights that matter.
             </p>
@@ -143,16 +128,16 @@ const HeroSection = () => {
           {/* Features Icons */}
           <div className="flex justify-center gap-8 mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <div className="flex flex-col items-center gap-2">
-              <Zap className="w-8 h-8 text-neon" />
-              <span className="text-neutral text-sm font-poppins">Real-time</span>
+              <Zap className="w-8 h-8 text-cyan-400" />
+              <span className="text-slate-400 text-sm font-poppins">Real-time</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <TrendingUp className="w-8 h-8 text-coral" />
-              <span className="text-neutral text-sm font-poppins">Trending</span>
+              <TrendingUp className="w-8 h-8 text-purple-400" />
+              <span className="text-slate-400 text-sm font-poppins">Trending</span>
             </div>
             <div className="flex flex-col items-center gap-2">
-              <Brain className="w-8 h-8 text-mustard" />
-              <span className="text-neutral text-sm font-poppins">AI-Curated</span>
+              <Brain className="w-8 h-8 text-blue-400" />
+              <span className="text-slate-400 text-sm font-poppins">AI-Curated</span>
             </div>
           </div>
 
@@ -160,13 +145,13 @@ const HeroSection = () => {
           <div className="max-w-lg mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
-                <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-neutral" />
+                <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email for AI news insights"
-                  className="w-full pl-12 pr-4 py-4 bg-dark border-2 border-neutral rounded-lg text-light placeholder-neutral font-poppins focus:border-neon focus:outline-none focus:neon-glow transition-all duration-300"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border-2 border-slate-600 rounded-lg text-white placeholder-slate-400 font-poppins focus:border-cyan-400 focus:outline-none transition-all duration-300 backdrop-blur-sm"
                   disabled={isLoading}
                   aria-label="Email address"
                 />
@@ -175,10 +160,10 @@ const HeroSection = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-coral hover:bg-coral/90 text-light font-montserrat font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-montserrat font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
               >
                 {isLoading ? (
-                  <div className="w-5 h-5 border-2 border-light border-t-transparent rounded-full animate-spin"></div>
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                 ) : (
                   <>
                     Join the AI Revolution
@@ -187,21 +172,6 @@ const HeroSection = () => {
                 )}
               </button>
             </form>
-
-            <p className="text-sm text-neutral mt-4 font-poppins">
-              Join 10,000+ innovators getting daily AI insights. No spam, unsubscribe anytime.
-            </p>
-          </div>
-
-          {/* Social Proof */}
-          <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <p className="text-neutral font-poppins mb-6">Trusted by professionals from</p>
-            <div className="flex justify-center items-center gap-8 opacity-60">
-              <div className="text-lg font-montserrat font-semibold text-light">Google</div>
-              <div className="text-lg font-montserrat font-semibold text-light">Microsoft</div>
-              <div className="text-lg font-montserrat font-semibold text-light">OpenAI</div>
-              <div className="text-lg font-montserrat font-semibold text-light">Tesla</div>
-            </div>
           </div>
         </div>
       </div>
