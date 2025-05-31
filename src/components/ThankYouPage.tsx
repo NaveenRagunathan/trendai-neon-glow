@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { CheckCircle, Mail, Sparkles } from 'lucide-react';
 
 const ThankYouPage = () => {
@@ -18,17 +17,17 @@ const ThankYouPage = () => {
         <div className="max-w-2xl mx-auto text-center">
           {/* Success Icon */}
           <div className="mb-8 animate-fade-in-up">
-            <div className="w-24 h-24 bg-neon rounded-full flex items-center justify-center mx-auto mb-6 animate-neon-pulse">
+            <div className="w-24 h-24 bg-neon rounded-full flex items-center justify-center mx-auto mb-6 animate-neon-pulse neon-glow">
               <CheckCircle className="w-12 h-12 text-dark" />
             </div>
           </div>
 
           {/* Thank You Message */}
           <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-light mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-montserrat font-bold text-light mb-6 leading-tight neon-text">
               Welcome to the 
               <br />
-              <span className="gradient-text">AI Revolution!</span>
+              <span className="gradient-text neon-text">AI Revolution!</span>
             </h1>
             <p className="text-xl md:text-2xl text-mustard font-poppins font-light leading-relaxed">
               🎉 You're now part of an exclusive community of AI enthusiasts and innovators.
